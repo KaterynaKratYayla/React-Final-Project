@@ -1,0 +1,10 @@
+[
+    {
+        "src": "nextarrow.png",
+        "type": "rightarrown"
+      },
+      {
+        "src": "prevarrow.png",
+        "type": "leftarrow"
+      }
+]

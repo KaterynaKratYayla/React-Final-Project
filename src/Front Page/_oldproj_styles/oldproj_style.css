@@ -1,0 +1,42 @@
+.wrapper{
+    margin: auto;
+    max-height: 50%;
+    padding-bottom: 50px;
+    overflow: hidden;
+    }
+
+.awesome-slider{
+    height: 500px;
+    margin: auto;
+    }
+
+.awesome-slider img{
+    height: 50%; 
+    width:  100%;
+    }
+
+.slick-arrow {
+background-color: burlywood;   
+width:30px;
+height:30px;
+border-radius: 9px;
+font-size:20px;
+font-weight:bold;
+}
+
+.slick-dots {
+background:none;
+}
+
+.slick-dots li{
+    background: burlywood;
+    transform: rotate(45deg);
+    overflow: hidden;
+}
+
+.slick-dots li:hover{
+    opacity: 1;
+    transition: .3s ease;
+    background: rgba(0,0,0,.5); 
+    animation: fade .5s linear forwards;
+    }

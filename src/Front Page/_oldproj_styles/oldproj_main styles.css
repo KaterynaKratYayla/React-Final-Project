@@ -1,0 +1,388 @@
+.top span{
+    font-family: Calibri;
+    font-weight:bold;
+    font-size: 9px;
+    padding-left:5px;
+    color:rgb(3, 3, 63);
+   }
+
+.top{
+   width: 100%;
+   display: inline-block;
+   background-color: rgb(235, 214, 188);
+   box-shadow: 0 0 3px 5px rgb(235, 214, 188);
+}
+    
+.topright{
+    width:600px;
+    float:right;
+
+    }
+    
+.topleft{
+    width:200px;
+    float:left;
+    }
+    
+ul.hr li{
+    display:inline;
+    }
+
+    .logo{
+        width: 30%;
+       }
+
+.upper{
+    font-family:Calibri;
+    font-size:12px;
+    color:rgb(3, 3, 63);
+    padding:13px
+    }
+.upper:hover{
+    color:brown;
+    text-decoration:underline
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    width: 200px;
+    height: 100px;
+    position: fixed;
+    margin-top:20%;
+    left: 50%;
+    transform: translate(-50%);
+    border:5px solid burlywood;
+    padding: 30px;
+    background-color:cornsilk;
+    z-index: 1000;
+}
+
+.modal label{
+color:black;
+font-family:Caladea;
+font-weight:bold;
+font-size:12px;
+text-align:center;
+width:100%
+}
+
+.text{
+font-family:Calibri;
+font-size:12px;
+}
+
+.modal input.text{
+transform: translate(-15%);
+}
+
+
+#Submit,
+#Close{
+font-family: Calibri;
+font-size:12px;
+font-weight:bold;
+cursor:pointer;
+color:burlywood;
+background:saddlebrown;
+text-align:center;
+left:50%;
+transform: translate(-50%);
+}
+
+   #container {
+    padding-top: 25px; 
+    width: 90%;
+    margin: auto; 
+    padding: 2em -0.5em;
+   }
+
+   #nav {
+    width: 340px;
+    padding-right:100px; 
+    float: left;
+   } 
+    
+   .navtx {
+    color: darkblue;
+    font-size:15px;
+    font-family: Caladea;
+    font-weight:bold;
+    font-style:italic;
+    padding: 10px;
+    }
+
+   ul.hr {
+    list-style: none;
+    margin: 0; 
+    padding: 0; 
+  }
+
+  ul.hr li{
+    display:inline
+
+  }
+  
+   #aside {
+    width: 200px; 
+    float: right;
+   }
+   
+   #content {
+    margin: 0 300px 0 300px;
+    padding-left:20%
+    }
+
+   .banner{
+    padding-top:30px;
+    padding-right: 100px;
+    
+   }
+   .book{
+      font-family:Calibri;
+        font-size:30px;
+        background: rgb(223, 166, 91);
+        color:white;
+        border-radius: 20px 0 0 0;
+        padding: 5px 10px 5px 10px;
+        transition: all .3s linear;
+    	-webkit-transition: all .3s linear;
+    	-moz-transition: all .3s linear; 	
+    	text-transform: uppercase
+        }
+    .book:hover,
+    button.action:hover
+    {
+        color:rgb(245, 245, 109); 
+        background: rgb(134, 93, 43);
+        cursor:pointer;
+        transition: all .3s linear;
+    	-webkit-transition: all .3s linear;
+    	-moz-transition: all .3s linear;
+    }
+
+     button.action{
+     font-family:Calibri;
+     font-size:15px;
+     background:rgb(223, 166, 91) ;
+     color:white;
+     cursor:pointer;
+     border-radius: 5px;
+     width: 10%
+     transition: all .3s linear;
+    	-webkit-transition: all .3s linear;
+    	-moz-transition: all .3s linear; 	
+    	text-transform: uppercase
+     }
+    
+     input.inputaction{
+        font-family:Calibri;
+        font-size:15px;
+        background:white;
+        color: silver;
+        border-radius: 5px;
+        width: 35%
+        }
+
+   .banner2{
+    text-align:center;
+   }
+
+   .wrapper_main {
+    margin: auto;
+    }
+        
+    footer{
+    /* background : rgb(97, 10, 10); */
+    background: rgb(80, 64, 44);
+    min-height:400px}
+    
+    .lmenu{
+    color: rgb(133, 133, 240);
+    font-style:bold;
+    font-family:Calibri;
+    font-size:12px;
+    }
+    
+    #second{
+    width: 90%;
+    height: 90%
+    border:0px;
+    margin:auto;
+    text-align:justify;
+    }
+    
+    a{
+    color:#C0C0C0;
+    font-size:11px;
+    font-family:Calibri;
+    text-decoration:none;
+    }
+    a:hover{
+    color:rgb(133, 133, 240);
+    text-decoration:underline;
+    cursor:pointer;
+    }
+    .upper:hover{
+         color: rgb(78, 17, 17);
+         text-decoration: underline;
+     }
+
+    .tblbottom th{
+    text-align: justify;
+    padding-left: 3%;
+    width:33%}
+    
+    .tblbottom td{
+    text-align: justify;
+    padding-right:15%;
+    width :33%
+     }
+    
+    /* #second{
+        text-align: center;
+    } */
+
+    #second td img{
+    width:15%;
+    }
+
+    form{
+    text-align:right;
+    margin-right:10%}
+    
+    input #bottom{
+    font-family:Calibri;
+    font-size:12px;
+    background:black;
+    placeholder:#C0C0C0;
+    color:white}
+    
+    .Subscribe{
+    font-family:Calibri;
+    font-size:12px;
+    background:Dimgrey;
+    color:white;
+    cursor:pointer;
+    }
+
+    #toTop {
+        display: block;
+        position: fixed;
+        padding: 13px;
+        border: none;
+        border-radius: 13px;
+        right: 40px;
+        bottom: 140px;
+        background: burlywood;
+        cursor: pointer;
+        display: none;
+        font-weight:bold;
+        font-size:30px;
+        color:white;
+        }
+
+
+#first{
+    width:100px;
+    margin:auto;
+    padding-bottom: 40px;
+}
+
+#first img{
+    width:240px;
+}
+
+.atable{
+display: block; 
+position: relative; 
+}
+
+.photo{
+    height: 250px;
+    border-radius: 7px;
+    }
+
+.imagetext{
+    position:fixed;
+    width: 100%;
+    }
+
+.atable:after{
+content: ''; 
+position: absolute; 
+top: 0; 
+left: 0; 
+right: 0; 
+bottom: 0; 
+background: rgba(0,0,0,.5);  
+opacity: 0; }
+
+.atable:before{ 
+content: ''; 
+position: absolute; 
+top: 0; 
+left: 0; 
+right: 0; 
+bottom: 0; 
+opacity: 0; }
+         
+.atable:hover:before,
+.atable:hover:after { opacity: 1; }
+         
+.container1 {
+position: relative;
+width:100%;
+overflow: hidden;
+}
+
+.overlay{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+height: 100%;
+width: 100%;
+opacity: 0;
+transition: .3s ease;
+background: rgba(0,0,0,.5); 
+animation: fade .5s linear forwards;
+}
+                 
+                   
+.container1:hover .overlay {
+opacity: 1;
+}
+                   
+.icon{
+color: white;
+font-size: 60px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+text-align: center;
+}
+                 
+                   
+.fa-heart:hover {
+color: #eee;
+}
+
+.ulbottom li{
+    list-style-type :none;
+}
+
+.foot1 {
+    display: block;
+    background: rgb(187, 140, 80);
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Verdana;
+    /* position: absolute; */
+    text-align: center;
+    height : 40px;
+}

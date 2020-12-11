@@ -1,0 +1,33 @@
+[
+    {
+        "id": 0,
+        "url": "https://arktur.ua/sites/default/files/public/image/slider/Lavra_shutterstock_1545799133_small.jpg",
+        "alt": "Kyiv Pechersk Lavra Monastery",
+        "title": "Fascinating Kyiv"
+    },
+    {
+        "id": 1,
+      "url": "https://arktur.ua/sites/default/files/public/image/slider/Azov%20sea_small.jpg",
+      "alt": "Azov Sea",
+      "title": "Relaxing Southern Ukraine"
+    },
+    {
+        "id": 2,
+        "url": "https://arktur.ua/sites/default/files/public/image/slider/carpathians_shutterstock_750654637_small.jpg",
+        "alt": "Bukovel Ski Resort in Carpathians",
+        "title": "Wonderful Western Ukraine"
+    },
+    {
+        "id": 3,
+        "url": "https://arktur.ua/sites/default/files/public/image/slider/Odesa%20Opera%20House_shutterstock_179655773_small.jpg",
+        "alt": "Odesa Opera House",
+        "title": "Charming Odesa"
+    },
+    {
+        "id": 4,
+        "url": "https://arktur.ua/sites/default/files/public/image/slider/KamenetsCastle_shutterstock_1621762234_small.jpg",
+        "alt": "Kamenets Podilskiy Castle",
+        "title": "Castles of Ukraine"
+    }
+
+]
