@@ -143,11 +143,11 @@ const [rate, setRate] = useState([])
             </>
          </ul>  
          <>
-           {
+           {/* {
              searchResults[0].click && ( 
                 <TourDetails searchResultsNew={searchResults}/>
              )
-           }
+           } */}
          </>
 
     </div>
@@ -174,18 +174,40 @@ const [rate, setRate] = useState([])
           
               {
                 <li key={object[key].tour_id} className='descriptionLi'>
-                    <h3>{object[key].tour_name}</h3>
+                    {/* <h3>{object[key].tour_name}</h3> */}
                     
                     <div>
                         <h4>{object[key].category}</h4>
-                        <button onClick={getDetails} id={object[key].tour_id}>From {object[key].n_value }{ object[key].currency_name}</button>
+                        <button 
+                             style={{backgroundColor: 'lightgreen', 
+                                     color: 'black' , 
+                                     fontWeight: 'bold'}} 
+                             onClick={getDetails} 
+                             id={object[key].tour_id}>
+                                  From {object[key].n_value }{ object[key].currency_name}
+                        </button>
                     </div>
                 </li>
               }
-             
-       </>
+               <> 
+                  {
+                    searchResults[0].click && ( 
+                      <TourDetails searchResultsNew={searchResults}/>
+                     )
+                  }
+               </>
+          </>
       )
     }
-    else return null;
+    else return (<div>
+                    <h4>{object[key].category}</h4>
+                   <button 
+                     style={{background: 'red' , 
+                             color: 'white' , 
+                             fontWeight: 'bold'}}>
+                       On Request Only
+                   </button>
+                </div>
+            )
    }
   }
