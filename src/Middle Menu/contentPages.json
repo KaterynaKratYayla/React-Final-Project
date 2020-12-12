@@ -2,26 +2,28 @@
     {
         "title": "About",
         "Description": "is a leading fully licenced Ukrainian Destination Management company and Tour Operator since 1994 with offices in Kyiv,Odesa and Lviv providing international highest standards of service for the incoming tourist, corporate and incentive markets, Online Travel Agencies and the GDS, sport event organizers in Ukraine as well as full package of services for business travel",
-        "photos":{
-            "1":"https://arktur.ua/sites/default/files/public/image/About%20us/GeneralPicture.png"
-        }
+        "photos":[
+            "https://arktur.ua/sites/default/files/public/image/About%20us/GeneralPicture.png"
+           ]
     },
     {
         "title": "Gallery",
         "Description": "Chain of culture oriented groups from Turkey on the routeOdesa - Kyiv - Vinnytsya - Chernivtsi - Lviv - Kyiv as per 'Grand Ukraine' tour by Arktur Touroperator and DMC (January - March 2020).",
-        "photos":{
-            "1":"https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.35.27_0.jpeg",
-            "2":"https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.30.29%20(3)_0.jpeg",
-            "3":"https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.30.29_0.jpeg",
-            "4":"https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.35.26%20(1)_0.jpeg",
-            "5":"https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.30.28%20(3)_0.jpeg"
-        }
+        "photos":
+            [
+              "https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.35.27_0.jpeg",
+              "https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.30.29%20(3)_0.jpeg",
+              "https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.30.29_0.jpeg",
+              "https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.35.26%20(1)_0.jpeg",
+              "https://arktur.ua/sites/default/files/public/image/Gallery/2020/WhatsApp%20Image%202020-09-17%20at%2021.30.28%20(3)_0.jpeg"
+            ]
+        
     },
     {
         "title": "COVID-19",
         "Description" : "The Government of Ukraine temporarily restricts entry of foreigners and stateless persons to Ukraine. In view of the growing number of new COVID-19 cases in Ukraine, the Government has made a decision to impose temporary restrictions on the entry of foreigners and stateless persons to Ukraine. The restrictions will apply onward from 00:00, August 28 until 00:00, September 28, 2020. At the same time, exceptions have been made for the broadest possible list of traveler categories, in order to mitigate the impact on people-to-people and business contacts.The entry restrictions do not apply to the following categories of persons: first degree relatives of citizens of Ukraine - the spouses, children, parents and grandparents of Ukrainian citizens; those with an official valid work permit for Ukraine; technical specialists arriving in Ukraine at the invitation of Ukrainian enterprises;those arriving in Ukraine to study at the Higher Educational Institutions;those serving in the Armed Forces;those having a temporary or permanent residency permit for Ukraine; heads or members of foreign official delegations, staff members of international organizations and their accompanying persons entering Ukraine at the invitation of the President, Verkhovna Rada, Cabinet of Ministers, Office of the President, Ministry of Foreign Affairs of Ukraine;drivers and/or crew members of freight vehicles, buses on regularinternational routes, aircraft, sea and river ships, trains and locomotives;cultural figures arriving at the invitation of cultural institutions as well as one accompanying person for each of them;athletes arriving in Ukraine to compete in official sporting events, as well as their accompanying persons; those transporting hematopoietic stem cells for transplantation;those arriving for treatment at healthcare facilities of Ukraine.",
-        "photos":{
-            "1":"https://arktur.ua/sites/default/files/public/image/About%20us/GeneralPicture.png"
-        }
+        "photos":[
+            "https://arktur.ua/sites/default/files/public/image/About%20us/GeneralPicture.png"
+        ]
     }
 ]

@@ -1,6 +1,6 @@
 import React from 'react'
 import {css,jsx} from '@emotion/react'
-// import nextarrow from '../images/nextarrow.png'
+import nextarrow from '../images/nextarrow.png'
 // import prevarrow from '../images/prevarrow.png'
 
 
