@@ -1,0 +1,40 @@
+.galleryCSS{
+    position: relative;
+    height: 100%;
+    width: 100vh;
+    margin: 0 auto;
+    overflow: hidden;  
+} 
+
+.prevGallery, .nextGallery {
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+    top: 45%;
+    width: auto;
+    padding: 16px;
+    color: rgb(3,3,63);
+    background-color: rgb(255,255,255,0.6);
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+  
+  }
+  
+  .nextGallery {
+    right: 0;
+    /* border-radius: 3px 0 0 3px; */
+  }
+
+  .leftGallery {
+    padding-right: 50px;
+    /* border-radius: 3px 0 0 3px; */
+  }
+
+  
+  .prevGallery:hover, .nextGallery:hover {
+    background-color: rgba(102, 98, 98, 0.8);
+    color: white;
+    border-radius: 5vw;
+  }
+

@@ -1,5 +1,5 @@
 import React from 'react'
-import {TopMenu, MiddleMenu} from './Front Page/MenuLinks'
+import {TopMenu, MiddleMenu} from './Components/Pages/MenuLinks'
 import './App.css';
 import axios from 'axios'
 import store from '../src/Redux/redux/store';

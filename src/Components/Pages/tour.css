@@ -1,0 +1,95 @@
+.descriptionUl{
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.descriptionLi{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.descriptionLi div{
+    text-align: right;
+}
+
+/* .descriptionLi div button{
+    background: #dfa65b;
+    color: white;
+} */
+
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+    font-size: 10vw;
+  } */
+
+.searchFront{
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+  }
+
+  .availableButton{
+    padding: 1vw;
+    width: 13vw;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #5EB82F;
+    color: white;
+    border-radius: 0.5vw;
+  }
+
+  .availableButton:hover{
+    cursor:pointer;
+    background-color: darkgreen;
+    color: rgb(250, 250, 141)
+  }
+
+
+  .onrequestButton{
+    padding: 1vw;
+    width: 13vw;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: orangered;
+    color: white;
+    border-radius: 0.5vw;
+  }
+
+  .onrequestButton:hover{
+    cursor:pointer;
+    background-color: rgb(170,15,15);
+    color:rgb(250, 250, 141)
+  }
+
+  .searchrender_Wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* .searchFront-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    /* top: 100%;
+    left: 0;
+    right: 0;
+  } */
+  /* .searchFront-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .searchFront-items div:hover {
+    /*when hovering an item:*/
+    /* background-color: #e9e9e9;
+  } */
+  /* .searchFront-active { */
+    /* when navigating through the items using the arrow keys:*/ 
+    /* background-color: DodgerBlue !important; */
+    /* color: #ffffff; */
+  /* }  */
