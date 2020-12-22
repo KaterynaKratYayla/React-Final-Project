@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
-
+//import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 // import {history} from '../../Front Page/History'
 // import axios from "axios"
 import {useDispatch, useSelector} from 'react-redux'
@@ -12,7 +11,7 @@ import './hotels.css'
 import {HotelGallery} from '../Library/Hotel Photo Gallery/photoGallery'
 // import {SearchInner} from '../Library/search_block/search'
 
-export const HotelTest = ({option, selector, location, history, list}) =>{
+export const SingleHotel = ({option, selector, location, history, list}) =>{
 
   const dispatch = useDispatch();
   const descrip = useSelector(state => state.hotels.parts)
@@ -70,9 +69,9 @@ return(
         </div>
 
      <h3>Hotel Overview</h3>
-        <div class='anons'>{ReactHtmlParser(enDescrip.anons)}</div>
+        <div class='anons'>{/*ReactHtmlParser(*/enDescrip.anons}</div>
      <h3>Hotel Detailed Description</h3>
-        <div class='description'>{ReactHtmlParser(enDescrip.description)}</div>
+        <div class='description'>{/*ReactHtmlParser(*/enDescrip.description}</div>
 
 
 </div>
@@ -90,7 +89,7 @@ return(
 // const [descEn, setDescEn] = useState([]);
 // const [descRu, setDescRu] = useState([]);
 // const [descUa, setDescUa] = useState([]);
-// const [images, setImages] = useState();
+// const [images, setImages] = useState3();
 
 
 // useEffect (() => {

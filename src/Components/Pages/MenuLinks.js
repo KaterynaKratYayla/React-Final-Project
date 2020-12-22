@@ -11,7 +11,8 @@ import { GuestItem } from './searchrender'
 import {Router} from 'react-router'
 import { TourDetails } from './tourDetails'
 import Helmet from '../Helmet'
-import {HotelTest} from './hotels_test'
+import {SingleHotel} from './single_hotel'
+import { TestCities } from './test_cities'
 // import { findByLabelText } from '@testing-library/react'
 
 //Call: +38 044 498 4880 / inquiry@arktur.ua / COVID-19 / ABOUT US / CONTACT US / SIGN IN / FOR GROUPS / LOGIN / TRANSLATE
@@ -83,6 +84,9 @@ export const TopMenu = () => {
 					<h2>
                         <NavLink exact to='/gallery' activeClassName='active'>GALLERY</NavLink>
 					</h2>
+					<h2>
+                        <NavLink exact to='/testcities' activeClassName='active'>TestCities</NavLink>
+					</h2>
 
 	
 				</div>
@@ -111,8 +115,9 @@ export const TopMenu = () => {
 					{/* <Route component={NotFound} /> */}
 
 						<Route exact path='/' component={HomePage} />
-                        <Route exact path='/hotels_in_ukraine' component={HotelTest}/*{HOTELS}*/ />					
+                        <Route exact path='/hotels_in_ukraine' component={SingleHotel}/*{HOTELS}*/ />					
                         <Route exact path='/gallery' component={PureContent} />  
+						<Route exact path='/testcities' component={TestCities} /> 
 						<Route path='/search_results' component={GuestItem} />	
 						<Route exact path='/search_results_/tour_details' component={TourDetails} />
 						<Route exact to='/Kyiv' component={PureContent}/>

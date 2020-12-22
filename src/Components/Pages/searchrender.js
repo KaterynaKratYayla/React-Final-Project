@@ -8,10 +8,18 @@ import { Route, Switch, BrowserRouter, useHistory } from "react-router-dom";
 import {TourDetails} from './tourDetails';
 import './tour.css'
 import {SearchInner} from '../Library/search_block/search'
+// import hotelLIST from '../Library/static json data/hotelLIST.json';
+import moment from 'moment';
+import 'moment/locale/uk'
+
+moment.locale('uk')
+
+// import 'moment-timezone';
 
 export const GuestItem = ({option, selector, location, history, list}) =>{
 
 const searchResults = history.location.state;
+console.log('[SEARCHRESULTS] : ' , searchResults[0].title)
 
 const dispatch = useDispatch();
 const data = useSelector(state => state.posts.items)
@@ -20,68 +28,73 @@ const [result, setResult] = useState('')
 const [rate, setRate] = useState([])
 const [filteredrate, setFilteredRate] = useState([]);
  
-       useEffect ( () => {
-          dispatch (getPosts ());
-    }, []);
+    useEffect ( () => {
+    axios.get(`https://hotelsukraine.travel/ua/my_list_hotels/?type=full&hotels=${searchResults[0].title}&json=1&_dc=1608289903506&getDescription=Ext.data.JsonP.getDescription`,  {
+    }) 
+    .then( res => {
+      console.log('[HUKRES] : ' , res.data)
+        console.log( JSON.parse(res.data.substring(30, res.data.length-1)) );
+        // dispatch( tourResponse(JSON.parse(res.data.substring(30, res.data.length-1))) );
+    
+    })
+    .catch( error => {
+      console.log( '[axios error] : ' , error)
+    });
 
-    console.log('[BEFORE] : ' , data)
-
-    /////!!!!!!!!!!!!!!!!Wне будет в живой системе. JSON по инфо о турах фейковый, а ценовой запрос - реальный////
-    ////Для правильного вывода мне нужно , чтобы в инфо о турах приходит соответствующий id!!!!!!!/////////
-      // data[0].tour_id = '16614';
-      // data[1].tour_id = '16465';
-
-      data.forEach(function(item, index){
-        item.tour_id='';
-         if(index === 0){
-           item.tour_id='16614'
-          }
-         else if(index === 1){
-           item.tour_id='16465'
-          }
-         else {item.tour_id='17777'}
-      })
-    /////////////!!!!!!!!!!!!!!!!!!!!!???????????????????????????//////////////////
-
-    console.log('[AFTER] : ' , data)
+}, []);
 
     useEffect ( () => {
        axios.get('http://smartbooker.biz/interface/services',  {
 
         params: {
           action: "SiteArktur_SearchAPI_RQ",
+          // classifier: 'contract'
           c_language: "RU",
           login: "hotelsukraine",
           password: "5006601",
           i_currency: "2001",
           adults_count: searchResults[0].adults,   /// must be 0
-          children_count: searchResults[0].children,  ///must be 0
+          // children_count: searchResults[0].children,  ///must be 0
           n_quantity: "1",   ////must be 1
           d_start: searchResults[0].date,  ////must be 2020-12-12
           n_nights: "5",    ///must be 5 nights
-          i_city: "",  //// must be ""
+          i_city: "41",  //// must be ""
           i_hotel:"6420",    //// must be "6420"
-          tour_name: ""  //// must be ""
+          tour_name: "" , //// must be ""
+          tour_id: searchResults[0].title
          },
         })
     .then( res => {
-          const newArray = res.data.hotels.hotel.dates.date[0].price.map(function(item){
-            for (let key in item){
-              return item[key]
-            }
-          })
 
-          setRate([...newArray])
-          
+      console.log('[RES] : ' , res.data)
+        const filteredTours = res.data.filter(function(tour){
+        return tour.tour_id.includes(searchResults[0].title)
+        })      
+        console.log('[FILTERED TOURS] : ' , filteredTours)
+          // const newArray = res.data.hotels.hotel.dates.date[0].price.map(function(item){
+          //   for (let key in item){
+          //     return item[key]
+          //   }
+          // })
+
+          // setRate([...newArray])
+      //     const filteredDate = filteredTours.filter(function(tour){
+      //       return tour.date.includes(searchResults[0].date)
+      //       })   
+      //       console.log('[FILTERED DATE] : ' , filteredDate)
+          console.log('[SMART DATE] : ', moment(filteredTours[0].date).format('L'))
+          console.log('[SEARCH DATE] : ', moment(searchResults[0].date).format('L'))
       })
+
+      // console.log(filteredTours[0].date)
     .catch( error => {
        console.log( '[axios error] : ' , error)
        setRate(undefined)
-       setFilteredRate(undefined)
+      //  setFilteredRate(undefined)
         });
     }, []);
 
-    console.log("[FILTERED RATE] : " , rate)
+    // console.log("[RATE] : " , rate)
 
     return(
         <div class='searchrender_Wrapper'>

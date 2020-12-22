@@ -4,8 +4,13 @@ import './search.css';
 import hotelLIST from '../Library/static json data/hotelLIST.json';
 import {GuestItem} from '../Pages/searchrender';
 import {withRouter, Route, Redirect, Link, BrowserRouter, Switch} from 'react-router-dom'
+import {Switcher, SwitcherItem} from '../Library/Switcher'
+import '../Library/switcher_index.css'
+import moment from 'moment';
+import 'moment/locale/uk'
 
 import { useHistory } from "react-router-dom";
+moment.locale('uk')
 
 export const Search = (props) => {
 
@@ -16,13 +21,18 @@ export const Search = (props) => {
   const [Children, setChildren] = useState('');
   const [inputSelect, setinputSelect] = useState('');
   const [option, setMyOption] = useState(''); 
-  // const [index, setIndex] = useState('');
-  const [smartresponse, setResponse] = useState('');
+  const [index, setIndex] = useState('');
+  // const [smartresponse, setResponse] = useState('');
   const history = useHistory();
 
   const [list , setList] = useState([]);
   const [selector, setSelect] = useState([{title: 'Loading...'}]);
   
+  const [align, setAlign] = useState('');  
+  const toggler = ( me ) => _ => {
+    setAlign(me);
+   }
+
   console.log(hotelLIST)
 
   const changeHandler = (e) => {
@@ -31,8 +41,9 @@ export const Search = (props) => {
         return tour.title.toLowerCase().includes(etarget.toLowerCase())
         })         
          setSelect(filteredUsers)
-         console.log(setSelect)
+         console.log('[SELECTOR] : ' , selector)
          setinputSelect(etarget)
+         console.log('[ETARGET SELECT] : ' , inputSelect)
    }
 
    
@@ -51,6 +62,7 @@ export const Search = (props) => {
 
   const optionChecker = (e) => {
      console.log(e.target.value)
+    //  console.log(e.target.id)
      setMyOption (e.target.value)
     }
 
@@ -95,17 +107,28 @@ export const Search = (props) => {
 
   return(
         <div>
+
+         <div class='switcher'>
+             <Switcher name={'align'} changeHandler={toggler} active={align}>
+                  <SwitcherItem value='HOTELS'>HOTELS</SwitcherItem>
+                  <SwitcherItem value='TOURS'>TOURS</SwitcherItem>
+                {/* <SwitcherItem value='job Applicant'>Job Applicant</SwitcherItem> */}
+             </Switcher>   
+          </div>  
+
           <div class='formOuterWrapper'>
+        
            <div class="formInnerWrapper">
-             <form className='mySearch' onSubmit={onSubmit}>
+             <form className='mySearch' onSubmit={onSubmit}> 
                  <input class='textInput' type='text' value={inputSelect} onChange={changeHandler} placeholder={'Country or City'}/>
                    <select onChange={optionChecker}>
                       {
-                          selector.length > 0 ? (
+                          selector.length >= 0 ? (
                             selector.map((pac) => {
                               // setIndex(pac.index)
+                              // console.log(pac.tour_id)
                                 return (
-                                    <option value={pac.title}>{pac.title}</option>
+                                    <option value={pac.tour_id} >{pac.title}</option>
                                   )
                                 }
                               )
@@ -118,13 +141,14 @@ export const Search = (props) => {
                       
                      </select> 
              <div>
-            
+       
                <input 
                  class='dateInput'
                  type="date" 
                  value={date}
                  onChange={dateFunc}
                  required/>
+          
              </div>
           
             <div>

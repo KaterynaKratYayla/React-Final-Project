@@ -4,6 +4,7 @@ import axios from '../helpers/public.axios';
 import { GET_POSTS_REQ, GET_POSTS_RES, GET_POSTS_ERR,GET_DESC_REQ, GET_DESC_RES , GET_DESC_ERR } from '../constants';
 import { GET_EN_DESC_REQ, GET_EN_DESC_RES , GET_EN_DESC_ERR } from '../constants';
 import { GET_IMAGES_REQ, GET_IMAGES_RES , GET_IMAGES_ERR } from '../constants';
+// import { GET_TOUR_REQ, GET_TOUR_RES , GET_TOUR_ERR } from '../constants';
 
 export const postsRepsonse = ( res ) => ({
     type: GET_POSTS_RES,
@@ -114,3 +115,26 @@ export const getImages = () => ( dispatch, getState ) => {
         });
 
 }
+
+
+// export const tourResponse = ( res ) => ({
+//     type: GET_TOUR_RES,
+//     payload: res
+// });
+
+// export const getTour = () => ( dispatch, getState ) => {
+
+//     dispatch({ type: GET_TOUR_REQ });
+
+//     axios.get('https://hotelsukraine.travel/ua/my_list_hotels/?type=full&hotels=16752&json=1&_dc=1608289903506&getDescription=Ext.data.JsonP.getDescription',  {
+//         }) 
+//         .then( res => {
+//             // console.log( JSON.parse(res.data.substring(30, res.data.length-1)) );
+//             dispatch( tourResponse(JSON.parse(res.data.substring(30, res.data.length-1))) );
+        
+//         })
+//         .catch( err => {
+//             dispatch({ type: GET_TOUR_ERR, error: err });
+//         });
+
+// }
