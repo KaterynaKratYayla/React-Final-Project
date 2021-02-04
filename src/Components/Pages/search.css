@@ -1,7 +1,9 @@
 .mySearch{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    /* width: 40vw; */
+
 }
 
  .textInput ,
@@ -9,7 +11,7 @@
      font-size: 16px;
      font-family: Arial, Helvetica, sans-serif;
      color: #001959;
-     width: 20vw;
+     width: 40vw;
      padding: 1vw;
      border-bottom: none;
      border-top: none;
@@ -17,16 +19,30 @@
      border-right: 1px solid #001959;
     }
 
+.datePicker{
+    /* width: 30vw; */
+    /* background-color: blue; */
+}
+
+.dropdownDatePicker{
+    /* color: red; */
+    /* background-color: blue; */
+    /* width: 20vw; */
+    font-family: 'Tahoma';
+}
+
+
 .dateInput{
     font-size: 16px;
      font-family: Arial, Helvetica, sans-serif;
      color: #001959;
-     width: 10vw;
-     padding: 1.3vw;
+     width: 20vw;
+     /* position: absolute; */
+     /* margin-left: 45vw; */
      border-bottom: none;
      border-top: none;
      border-left: none;
-     border-right: 1px solid #001959;
+     border-right: none ; 
      cursor: pointer;
 
 }
@@ -54,9 +70,9 @@
         border-radius: 0.5vw;  
         padding: 0.7vw; 
         font-weight: bold;     
-        margin-top: 0.9vh;
-        margin-right: 0.5vw;
-        margin-left: 0.5vw;
+        /* margin-top: 0.9vh; */
+        margin-right: 1vw;
+        margin-left: 5vw;
 }
 
 .mySearch button:hover{
@@ -69,7 +85,7 @@
 
 .formInnerWrapper{
     border: 3px solid white;
-    width: 80vw;
+    width: 70.5vw;
     margin: -0.2vw;
     border-radius: 0.5vw; 
 

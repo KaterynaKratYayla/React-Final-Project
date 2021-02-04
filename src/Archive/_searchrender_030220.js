@@ -103,15 +103,26 @@ useEffect ( () => {
 
  console.log('[SET_RATE] : ' , rate)
 
+ //фильтрую объект с тарифами, датами так, чтобы вывести первую встречающую дату каждого вида (к примеру, у меня пришло
+ //в массиве 10 раз дата 2021-03-03, 3 раза дата 2021-03-04, 4 раза дата 2021-03-05 - я вывожу новый массив, где будет
+ //объект в массиве, где первый раз встречается 2021-03-03, потом объект, где встречается 2021-03-04 первый раз, и т.д.)
+ //это нужно, чтобы вывести список периодов для выбора
+
+//  const filtered_tour_dates = rate.map(function(item){
+//     return item.rate.filter((item1,index,array) =>
+//      array.findIndex(t => t.date === item1.date)===index)
+//  })
+ 
+//  console.log('[FILTERED_TOUR_DATES] : ' , filtered_tour_dates)
+
     return(
         <div class='searchrender_Wrapper'>
       
           <div>
           <h3>Search Results</h3>
               <SearchInner />
-               </div>
-                 
-                 <div>
+              </div>
+              <div>
                   <ul className='descriptionUl'>
                     <>
                       {
@@ -119,10 +130,10 @@ useEffect ( () => {
                           return (
                             <li key={tour.tour_id} className='descriptionLi'>
                                 <h3 style={{fontSize:'27px',
-                                             color: '#001959'}}>
-                                                    {tour.tour_name} 
-                                </h3>
-                                                         
+                                            color: '#001959'}}>
+                                              {tour.tour_name} </h3>
+                                {/* <p>{tour.about} </p> */}
+                                 
                                  {
                                    <ItemContent
                                       tour = {tour}
@@ -134,7 +145,6 @@ useEffect ( () => {
                                    if(tour.tour_id === tariff.tour_id){
                                     return (
                                     <ItemObj
-                                       key={tariff.tour_id}
                                        tariff = {tariff}
                                        searchResults = {searchResults}
                                        history={history}
@@ -145,6 +155,21 @@ useEffect ( () => {
                                  }
                                 ))
                               }
+                                      {/* {
+                                        rate && (rate.map((obj,index,array) => {                                    
+                                            return ( */}
+                                              {/* <ItemObj
+                                                  
+                                                  rateArray={rate}
+                                                  tour = {tour}
+                                                  searchResults = {searchResults}
+                                                  history={history}
+                                                   /> */}
+                                                    {/* )                                           */}
+                                                  {/* } */}
+                                               {/* ) */}
+                                          {/* ) */}
+                                      {/* }  */}
                 
                             </li>
                            )
@@ -232,98 +257,60 @@ const ItemContent = ({tour})=>{
   
   const ItemObj = ({tariff, searchResults, history}) => {
 
-    //фильтрую объект с тарифами, датами так, чтобы вывести первую встречающую дату каждого вида (к примеру, у меня пришло
-    //в массиве 10 раз дата 2021-03-03, 3 раза дата 2021-03-04, 4 раза дата 2021-03-05 - я вывожу новый массив, где будет
-    //объект в массиве, где первый раз встречается 2021-03-03, потом объект, где встречается 2021-03-04 первый раз, и т.д.)
-    //это нужно, чтобы вывести список периодов для выбора
+  console.log('[ItemObj TARIFF]', tariff)
+  console.log('[ItemObj searchResults]', searchResults)
+  console.log('[ItemObj HISTORY]', history)
 
-    const filtered_tour_dates = tariff.rate.filter((item1,index,array) =>
-    array.findIndex(t => t.date === item1.date)===index)
+  //фильтрую объект с тарифами, датами так, чтобы вывести первую встречающую дату каждого вида (к примеру, у меня пришло
+ //в массиве 10 раз дата 2021-03-03, 3 раза дата 2021-03-04, 4 раза дата 2021-03-05 - я вывожу новый массив, где будет
+ //объект в массиве, где первый раз встречается 2021-03-03, потом объект, где встречается 2021-03-04 первый раз, и т.д.)
+ //это нужно, чтобы вывести список периодов для выбора
 
-       console.log('[FILTERED_TOUR_DATES] : ' , filtered_tour_dates)
+const filtered_tour_dates = tariff.rate.filter((item1,index,array) =>
+     array.findIndex(t => t.date === item1.date)===index)
 
-    const [selection, setSelection] = useState(filtered_tour_dates[0].date);
-    // const [detailsList, setdetailsList] = useState([{}]);
-
-        console.log('[ItemObj TARIFF]', tariff)
-        console.log('[ItemObj searchResults]', searchResults)
-        console.log('[ItemObj HISTORY]', history)
-
-    function selectedPeriod (e) {
-      console.log('SELECTED : ' , e.target.value)
-      setSelection(e.target.value)
-
-  // history.push('/search_results' , [...list, newList])
-  // console.log('[HISTORY : ] ', history)
-}
-
-  return (
-    <div class='div_ItemObj'>
-    
-      <div className='availablePeriods'>
-       <div style={{fontSize: '13px',fontWeight: 'bold'}}>Available dates : </div>
-        <select 
-            value={selection}
-            onChange={selectedPeriod}
-            style={{fontSize: '12px',color:'#001959'}}>
-          <>
-            {
-              filtered_tour_dates && filtered_tour_dates.map((filter,index)=>{
-                return (
-                  <option 
-                   value={filter.date}
-                    key={tariff.tour_id, '-' , index}>
-                      {filter.date} -- {moment(filter.date).add(tariff.duration, 'days').format('YYYY-MM-DD')} ({tariff.duration} days)  
-                    </option>
-                )    
-              })
-            }
-          </>
-        </select>
-    </div>
-
-    <div className='minimumRate'>   
-       <div style={{fontSize: '10px', color:"grey", fontStyle:'italic'}}>{selection}</div>
-       <MinRate 
-          selection={selection}
-          datesArray={tariff.rate}
-        />
-      <button className='availableButton'>VIEW DETAILS</button> 
-      <div style={{fontSize: '10px', color:"grey", fontStyle:'italic'}}>{tariff.tour_id}</div> 
-    </div>
-
-  </div> 
-   )
-  }
-  
-  const MinRate = ({selection, datesArray}) =>{
-
-    console.log('[SELECTION]' , selection, datesArray)
-
-     // console.log('[FILTERED_RATE]', filteredRate)
+ console.log('[FILTERED_TOUR_DATES] : ' , filtered_tour_dates)
+ 
+  // console.log('[FILTERED_RATE]', filteredRate)
         // const getDetails = (e) => {
           //   searchResults[0].click = e.target.id;
         //   history.push('/search_results_/tour_details' , [searchResults[0]] )
           //   console.log(history)
           // }
    
-                    const minRateValue = datesArray.filter(function(item){
-                        if(selection === item.date){
-                          return true;
-                         }
-                          else return false;
-                        }).sort(function(a,b){
-                          // if(a.n_available > 0 || b.n_available > 0){
-                            return (a.n_value - b.n_value)
-                          // }                          
-                        })
+                    // const sortedArray = rateArray.filter(function(item){
+                    //     if(item.tour_id === tour.tour_id){
+                    //       return true;
+                    //      }
+                    //       else return false;
+                    //     }).sort(function(a,b){
+                    //       if(a.n_available > 0 || b.n_available > 0){
+                    //         return (a.n_value - b.n_value)
+                    //       }
+                          
+                    //     })
                       
-                      console.log('[SORTED ARRAY] : ' , minRateValue[0])
-
-    return(
-      <div className='minimumRate_details'>Rates from {minRateValue[0].price} UAH</div>
+                    //   console.log('[SORTED ARRAY] : ' , sortedArray)
+                      
+    return (
+      <div class='div_ItemObj'>
+          <select>
+            <>
+          {
+            filtered_tour_dates && filtered_tour_dates.map((filter)=>{
+                return (
+                  <option>{filter.date} - {moment(filter.date).add(tariff.duration, 'days').calendar()}</option>
+                )    
+            })
+          }
+          </>
+          </select>
+          <button>{tariff.tour_id}</button> 
+     </div> 
     )
   }
+  
+  
   //    <div>
   //    {
   //      sortedArray.length > 0 ? (
