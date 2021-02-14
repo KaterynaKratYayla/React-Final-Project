@@ -20,6 +20,7 @@ const store = createStore(
     composeEnhancers( middlewares )
 );
 
-console.log('[store]', store );
+
+console.log('[STORE]', store.getState());
 
 export default store;

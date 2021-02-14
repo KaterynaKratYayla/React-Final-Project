@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import './search.css';
-import {GuestItem} from '../Pages/searchrender';
+import {GuestItem} from './2nd_page_of_search/GuestItem';
 import {Switcher, SwitcherItem} from '../Library/Switcher'
 import '../Library/switcher_index.css'
 import moment from 'moment';
@@ -13,7 +13,7 @@ import {getGeo, getGeneralGeo} from "../../Redux/actions/cities"
 import { DatePicker ,Space } from 'antd'
 import 'antd/dist/antd.css'
 // import '../../App.css'
-import {SwitchablePicker} from '../Library/switchable_datepicker'
+// import {SwitchablePicker} from '../Library/switchable_datepicker'
 
 moment.locale('uk')
 
@@ -86,7 +86,7 @@ export const Search = (props) => {
 
   console.log('[NewList] : ' , newList)
 
-  history.push('/search_results' , [...list, newList])
+  history.push(`/search_results` , [...list, newList])
   console.log('[HISTORY : ] ', history)
 }
 
@@ -97,7 +97,7 @@ export const Search = (props) => {
    
   return(
         <div>
-
+        
          <div class='switcher'>
              <Switcher name={'align'} changeHandler={toggler} active={align}>
                   <SwitcherItem value='HOTELS'>HOTELS</SwitcherItem>
@@ -122,9 +122,10 @@ export const Search = (props) => {
                                  color: 'darkslategrey',
                                 //  marginTop: '0.2vw',
                                  marginLeft: '-2.2vw',
-                                 position: 'absolute',
+                                 position: 'fixed', ///
                                  display: 'block',
-                                 zIndex: '100'
+                                 zIndex: '100',
+                                 overflow: 'auto' ///
                                }
                               }
                     inputProps={{style: 

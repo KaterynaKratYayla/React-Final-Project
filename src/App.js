@@ -1,17 +1,28 @@
 import React from 'react'
-import {TopMenu, MiddleMenu} from './Components/Pages/MenuLinks'
+import {TopMenu} from './Components/Pages/MenuLinks'
+import {Footer} from './Components/Pages/Footer'
 import './App.css';
 import axios from 'axios'
 import store from '../src/Redux/redux/store';
 import { Provider } from 'react-redux';
-import AxiosDemo from './Redux/components/pages/Axios';
+import { BrowserRouter, Switch } from 'react-router-dom';
+import {ScrollToTop} from './Components/Library/ScrollToTop';
+// import AxiosDemo from './Redux/components/pages/Axios';
 
 function App() {
 
   return (
-    <Provider store={store}>
+    <BrowserRouter>
+      <Provider store={store}>
+        <ScrollToTop />
+        
         <TopMenu />
-    </Provider>
+        {/* <hr /> */}
+        <Footer />
+        
+     
+      </Provider>
+    </BrowserRouter>
   );
 }
 

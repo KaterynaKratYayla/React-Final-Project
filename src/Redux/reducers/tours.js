@@ -1,6 +1,7 @@
 import { GET_TOUR_REQ, GET_TOUR_RES , GET_TOUR_ERR} from '../constants'
 import { GET_EN_TOUR_REQ, GET_EN_TOUR_RES , GET_EN_TOUR_ERR} from '../constants'
 import { GET_IMAGES_TOUR_REQ, GET_IMAGES_TOUR_RES , GET_IMAGES_TOUR_ERR} from '../constants'
+import { GET_CONTENT_REQ ,GET_CONTENT_RES, GET_CONTENT_ERR} from '../constants'
 
 const initState = {
 	touritems: [],
@@ -13,6 +14,10 @@ const initState = {
 
     images: [],
     images_loaded: false,
+    errors: [],
+
+    content: [],
+    content_loaded: false,
     errors: []
 }
 
@@ -79,6 +84,26 @@ const reducer = ( state = initState, action ) => {
                     ...state,
                     errors: [...state.errors, action.error ]
                 })
+
+        case GET_CONTENT_REQ:
+              return({
+                ...state,
+                content_loaded: false
+                })
+        
+        case GET_CONTENT_RES:
+              return({
+                 ...state,
+                 content_loaded: true,
+                 content: action.payload
+                })
+        
+        
+        case GET_CONTENT_ERR:
+              return({
+                   ...state,
+                   errors: [...state.errors, action.error ]
+               })
 
         default:
 			return state;

@@ -2,7 +2,7 @@ import React, {Component,useState,useEffect} from 'react'
 // import './tour.css';
 import './search_inner.css';
 import hotelLIST from '../static json data/hotelLIST.json';
-import {GuestItem} from '../../Pages/searchrender';
+import {GuestItem} from '../../../Archive/_searchrender_v3';
 import {withRouter, Route, Redirect, Link, BrowserRouter, Switch} from 'react-router-dom'
 
 import { useHistory } from "react-router-dom";

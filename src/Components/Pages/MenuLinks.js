@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Route, NavLink, Link, BrowserRouter, Switch} from 'react-router-dom'
 import {COVID, ABOUT, CONTACTUS, SIGNIN, FORGROUPS} from './TopMenuComponents'
 import {HOTELS, GALLERY, LOGO, SOCIAL, NotFound} from './MiddleMenuComponents' 
@@ -7,21 +7,23 @@ import {TOURS} from './dropdowntours'
 import './menu.css'
 import { PureContent } from '../Library/purecontentPage'
 import { Search } from './searchfront'
-import { GuestItem } from './searchrender'
+import { GuestItem } from '../Pages/2nd_page_of_search/GuestItem'
 import {Router} from 'react-router'
-import { TourDetails } from './tourDetails'
+import { TourDetails } from './3rd_page_of_search/tourDetails'
 import Helmet from '../Helmet'
 import {SingleHotel} from './single_hotel'
 import { TestCities } from './test_cities'
+import {useLocation} from 'react-router-dom'
 // import { findByLabelText } from '@testing-library/react'
 
 //Call: +38 044 498 4880 / inquiry@arktur.ua / COVID-19 / ABOUT US / CONTACT US / SIGN IN / FOR GROUPS / LOGIN / TRANSLATE
 
+
 export const TopMenu = () => {
 	
 	return (
-		<header>
-		  <BrowserRouter >
+	<header class='wrapperMain'>		
+	  {/* <BrowserRouter > */}
 
 	   		<div className='topMenu'>
 				<div className='topMenu_right'>
@@ -118,8 +120,8 @@ export const TopMenu = () => {
                         <Route exact path='/hotels_in_ukraine' component={SingleHotel}/*{HOTELS}*/ />					
                         <Route exact path='/gallery' component={PureContent} />  
 						<Route exact path='/testcities' component={TestCities} /> 
-						<Route path='/search_results' component={GuestItem} />	
-						<Route exact path='/search_results_/tour_details' component={TourDetails} />
+						<Route path='/search_results' component={GuestItem}/>
+						<Route path='/tour_details' component={TourDetails} />
 						<Route exact to='/Kyiv' component={PureContent}/>
 						<Route exact to='/Odesa' component={PureContent}/>
 					    <Route exact to='/Lviv' component={PureContent}/>
@@ -129,10 +131,10 @@ export const TopMenu = () => {
 					    <Route exact to='/Mariupol' component={PureContent}/>
                 
 				</Switch>
-
-		  </BrowserRouter>
-			 
-		</header>
+			
+		  {/* </BrowserRouter> */}
+		</header> 
+		
 	)
  }
 

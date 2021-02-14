@@ -10,7 +10,7 @@ export const geoResponse = ( res ) => ({
     payload: res
 });
 
-export const getGeo = () => ( dispatch, getState ) => {
+export const getGeo = () => ( dispatch) => {
 
     dispatch({ type: GET_GEO_REQ });
 

@@ -4,6 +4,7 @@ import Slider from '../Library/slider/slider'
 import {Search} from './searchfront'
 import {Helmet} from 'react-helmet'
 import Arktur_DMC_logo from '../Library/images/Arktur_DMC_logo.ico'
+import {TopTours} from '../Library/toptours'
 
 export const HomePage = () => {
     
@@ -29,6 +30,7 @@ export const HomePage = () => {
                        textAlign: 'center'}}> ARKTUR TourOperator and DMC is your reliable partner in Ukraine</h2>
            <Slider slides={images}/>
            <Search />
+           <TopTours/>
        </div>
     )
 }

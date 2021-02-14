@@ -10,6 +10,11 @@ import {getTour, ENgetTour, IMGgetTour} from "../../Redux/actions/tour"
 import './hotels.css'
 import {HotelGallery} from '../Library/Hotel Photo Gallery/photoGallery'
 // import {SearchInner} from '../Library/search_block/search'
+import {getContent} from "../../Redux/actions/content"
+// import {TourDetails} from './tourDetails';
+import './tour.css'
+// import 'moment/locale/uk'
+// import ReactHtmlParser from 'react-html-parser'
 
 export const SingleTour = ({option, selector, location, history, list}) =>{
 
@@ -30,6 +35,7 @@ useEffect ( () => {
   dispatch(IMGgetTour());
 }, []);
 
+
 console.log('[GETOUR] : ', tourdescription)
 console.log('[ENgetTour] : ' , en_tourdescription)
 console.log('[IMGgetTour] : ' , images_tourdescription)
@@ -43,6 +49,7 @@ return(
   
   
  <div class='hotelWrapper'>
+         {/* <TestingContent/> */}
    <h2>{en_tourdescription.name} hotel in {en_tourdescription.name}</h2>
 
          { 
@@ -76,6 +83,7 @@ return(
          <div class='anons'>{/*ReactHtmlParser(*/en_tourdescription.anons}</div>
       <h3>Hotel Detailed Description</h3>
          <div class='description'>{/*ReactHtmlParser(*/en_tourdescription.description}</div>
+
 
 
  </div>
@@ -264,5 +272,61 @@ return(
     //     });
     // }, []);
 
+    
+//     export const TestingContent = ({tour})=>{    
+//     const dispatch = useDispatch();
+    
+//     const contents = useSelector(state => state.content.content)
+//     console.log('[CONTENTS] : ', contents)
+    
+//         useEffect ( () => {
+//           dispatch (getContent (tour.tour_id));
+//         },[]);
+    
+    
+//        return(
 
-  
+// <div style={{paddingRight: '2vw'}}>
+// <ul class='Ul_ItemContent'>
+//      <>
+//    {
+//    contents ? (contents.map((trip) =>{
+//     if(trip.content_name === 'Summary'){
+//       return (
+//           <li class='Li_ItemContent'>
+//                {ReactHtmlParser(trip.text)}
+//            </li>
+//          )
+//        }
+      
+//        else if(trip.content_name === 'Image'){
+//          return (
+//          <li
+//         style={{listStyleType:'none',
+//         textAlign: 'left'}}
+//         >
+//               <img 
+//                   // class='imageSearchrender'
+//                  style = {{
+//                   width: '18vw',
+//                   height: '14vw',
+//                   borderRadius: '5px'  
+//                   }}
+//                   src={'http://' + trip.text[2]}/> 
+//           </li>
+//         )
+//       }
+      
+//      }
+//    )) : (
+//     <div>HI CONTENT</div> 
+//    )
+//  }
+//   </>
+//  </ul>
+// </div>
+
+      //  )
+    // }
+      
+      

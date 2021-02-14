@@ -1,3 +1,6 @@
+.wrapperMain{
+    min-height: 100vh;
+}
 .topMenu{
     display: flex;
     flex-direction: row;
@@ -13,6 +16,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    
 }
 
 .topMenu_right{
@@ -196,7 +200,7 @@ a{
 .purecontentPage{
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    min-width: 60vw;
     /* padding: 2vw; */
     color: rgb(3, 3, 63);
     justify-content: center;
@@ -205,9 +209,4 @@ a{
     margin-right: auto;
 }
 
-/* .purecontentImg{
-    display: flex;
-    flex-direction: row;
-    border-radius: 5px;
-    width: 30%;
-} */
+
