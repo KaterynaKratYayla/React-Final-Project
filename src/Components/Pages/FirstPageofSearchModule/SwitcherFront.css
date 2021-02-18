@@ -1,0 +1,46 @@
+/* .myForm{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start ;
+    margin-top: 6vw;
+    margin-left: 7vw;
+}
+
+.myForm label{
+    padding-right: 30px;
+}
+
+.list__green {
+    color: green;
+}
+
+.list__red{
+    color: red;
+} */
+
+.switcher{
+    margin-top: 2vw;
+    margin-left: 4.9vw;
+    margin-bottom: -0.3vw;
+}
+
+.switcher__item.active{
+    background-color: #005AEB;
+    color: white;
+
+}
+
+.switcher__item{
+    background-color: #BCD7EE;
+    color: #001959;
+    font-weight: bold;    
+    cursor: pointer;
+    padding: 1vw 2vw 0.5vw 2vw;
+    border-top: 1px solid #8bc0f0;
+    border-left: 1px solid #8bc0f0;
+    border-right : 1px solid #8bc0f0;
+    border-bottom: none;
+    border-top-right-radius: 1vw;
+
+}

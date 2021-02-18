@@ -37,7 +37,7 @@
 
 //   const changeHandler = (e) => {
 //       const etarget = e.target.value;
-//       const filteredUsers = hotelLIST.filter(function(tour){
+//       const filteredUsers = .filter(function(tour){
 //         return tour.title.toLowerCase().includes(etarget.toLowerCase())
 //         })         
 //          setSelect(filteredUsers)

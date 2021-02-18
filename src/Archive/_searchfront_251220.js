@@ -3,7 +3,7 @@ import React, {useState,useEffect} from 'react'
 import './search.css';
 import {GuestItem} from '../Pages/searchrender';
 import {Switcher, SwitcherItem} from '../Library/Switcher'
-import '../Library/switcher_index.css'
+import '../Components/Pages/FirstPageofSearchModule/SwitcherFront.css'
 import moment from 'moment';
 import 'moment/locale/uk'
 import axios from 'axios'

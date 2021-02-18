@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useRef} from 'react'
 import { css ,jsx } from '@emotion/react'
-import SliderContent from './slidercontent'
-import Slide from './slide'
-import './slidercss.css'
-import {Arrow} from './arrow'
+import SliderContent from './SliderContent'
+import Slide from './Slide'
+import './SliderCss.css'
+import {Arrow} from './ArrowSlider'
 // import Dots from './dots'
 
 const Slider = props => {

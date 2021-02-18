@@ -1,0 +1,111 @@
+.mySearch_inner{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+
+}
+
+.SwitcherSearchPannel{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+ .textInput_inner{
+     /* font-size: 16px;
+     font-family: Arial, Helvetica, sans-serif;
+     color: #001959;
+     width: 15vw;
+     padding: 1vw; */
+     /* border: 1px solid #001959; */
+     /* border-top: none; */
+     /* border-left: none; */
+     /* border-right: none; */
+    }
+
+.select_inner{
+        /* font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #001959;
+        width: 17.15vw;
+        padding: 1vw; */
+        /* border: 1px solid #001959; */
+        /* border-top: none; */
+     /* border-left: none; */
+     /* border-right: none; */
+       }
+
+.dateInput_inner{
+    /* font-size: 16px;
+     font-family: Arial, Helvetica, sans-serif;
+     color: #001959;
+     width: 15vw;
+     padding: 1vw; */
+     /* border: 1px solid #001959; */
+     /* border-top: none; */
+     /* border-left: none; */
+     /* border-right: none; */
+
+}
+
+.number_inner{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(153, 161, 161);
+    width: 15vw;
+    padding: 1vw;
+    border: 1px solid #001959;
+    border-top: none;
+     border-left: none;
+     border-right: none;
+}
+
+.mySearch_inner button{
+        background-color: #005AEB;
+        color: white;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        /* width: 10vw; */
+        border-radius: 0.5vw;  
+        padding: 1vw; 
+        font-weight: bold;     
+        margin-top: 0.9vh;
+        margin-right: 0.5vw;
+}
+
+.mySearch_inner button:hover{
+    background-color: #001959;
+    cursor: pointer;
+}
+
+.formInnerWrapper_inner{
+    border: 3px solid white;
+    width: 17vw;
+    margin: -0.2vw;
+    border-radius: 0.5vw; 
+
+}
+
+.formOuterWrapper_inner{
+    border-top: 4vw solid #BCD7EE;
+    border-left: 1vw solid  #BCD7EE;
+    border-right: 1vw solid #BCD7EE;
+    border-bottom: 4vw solid  #BCD7EE;
+      margin-left: 2vw;
+      margin-top: 1vw;
+      border-radius: 0.5vw; 
+      width: 17vw;
+}
+
+.borderInnerWrapper2_inner{
+    border: 2px solid white;
+
+}
+
+.noResultSearch{
+    color: #001959;
+    font-size: 18px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:  Arial, Helvetica, sans-serif;
+}

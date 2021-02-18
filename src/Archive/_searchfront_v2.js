@@ -1,11 +1,10 @@
 import React, {Component,useState,useEffect} from 'react'
 // import './tour.css';
 import './search.css';
-import hotelLIST from '../Library/static json data/hotelLIST.json';
 import {GuestItem} from '../Pages/searchrender';
 import {withRouter, Route, Redirect, Link, BrowserRouter, Switch} from 'react-router-dom'
 import {Switcher, SwitcherItem} from '../Library/Switcher'
-import '../Library/switcher_index.css'
+import '../Components/Pages/FirstPageofSearchModule/SwitcherFront.css'
 import moment from 'moment';
 import 'moment/locale/uk'
 import axios from 'axios'
