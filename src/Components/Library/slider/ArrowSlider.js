@@ -2,9 +2,15 @@ import React from 'react'
 import {css,jsx} from '@emotion/react'
 import './SliderCss.css'
 
+const test = () => {
+    return(
+        <div>Test</div>
+    )
+}
+
 
 export const Arrow = ({ direction, handleClick }) => (
-    // console.log(direction),
+    // console.log('Hi Kate')
     
     <div onClick={handleClick}>
          {direction === 'right' ?  <div><a className="prev">&#10094;</a></div> : <div><a className="next">&#10095;</a></div>}    
