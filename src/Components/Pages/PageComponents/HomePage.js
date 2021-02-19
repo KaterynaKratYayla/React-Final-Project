@@ -1,6 +1,6 @@
 import React from 'react'
 import '../RoutesAndLinks/header.css'
-import Slider from '../../Library/Slider/Slider'
+import Slider from '../../Library/SLIDER/slider'
 import {Search} from '../FirstPageofSearchModule/SearchFront'
 import {Helmet} from 'react-helmet'
 import ArkturDMClogoICO from '../../Library/Images/ArkturDMClogoICO.ico'
