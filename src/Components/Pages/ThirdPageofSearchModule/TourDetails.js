@@ -5,6 +5,8 @@ import {useDispatch, useSelector} from 'react-redux'
 import { useHistory , useLocation} from "react-router-dom";
 import {getContent} from '../../../Redux/actions/content'
 import {ValidateQuery} from '../Helpers/helper'
+import {Gallery} from '../../Library/PhotoGallery/PhotoGallery'
+import './TourDetailsCSS.css'
 
   export const TourDetails = (props) =>{
     let location = useLocation();
@@ -23,7 +25,7 @@ import {ValidateQuery} from '../Helpers/helper'
     // }, []);
 
     useEffect ( () => {
-      axios.get(`http://smartbooker.biz/interface/content?id=${search_data.id}&language=en`)
+      axios.get(`http://smartbooker.biz/interface/content?id=${search_data.tour_id}&language=en`)
         .then( res => {
           setDetails(res.data)
           })
@@ -37,22 +39,30 @@ import {ValidateQuery} from '../Helpers/helper'
     console.log('[DETAILED CONTENT]', details)
 
       return (
-          <div>
-            <h2>{search_data.title}</h2>
+          <div class='TourDetailsWrapper'>
+            <h2>{search_data.title.replace(/%20/g , ' ')}</h2>            
             <h3>{search_data.selection}</h3>
-            <>
+            <div class='TourDetailsInner'>
               {
                 details && details.map((item) =>{
+                  if(item.content_name === "Image"){
+                    return (
+                        <div class='GalleryTourDetails'>
+                           <Gallery galleryImages={item.text}/>
+                       </div>
+                    )
+                  } 
+
                   if(item.content_name === 'Body'){
                     return (
-                        <div>
+                        <div class='DescriptionTourDetails'>
                             {ReactHtmlParser(item.text)}
                         </div>
                       )
                     }
                 })
               }
-            </>
+            </div>
 
             {/* {
                details && (details.map(item => {

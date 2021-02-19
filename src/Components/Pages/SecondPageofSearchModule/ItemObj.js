@@ -60,7 +60,7 @@ setDetailsList([outline]);
   // console.log('TEST TEST', e.view.history)
   // console.log('[DETAILS LIST] : ' , detailsList)
 
-  const route_query = `${location.search},selection=${selection}`
+  const route_query = `${location.search},tour_id=${tariff.tour_id},selection=${selection}`
   history.push(`/tour_details/${route_query}`, [...detailsList, outline])
 }
 

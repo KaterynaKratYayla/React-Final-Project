@@ -1,0 +1,25 @@
+.TourDetailsWrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.TourDetailsInner{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.GalleryTourDetails{
+    max-width: 50%;
+    margin-right: 3vw;
+    margin-left: 3vw;
+}
+
+.DescriptionTourDetails{
+    max-width: 50%;
+    margin-left: 4vw;
+}

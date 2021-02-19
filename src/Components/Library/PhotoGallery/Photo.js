@@ -1,5 +1,6 @@
 import React from 'react'
 import {css, jsx} from '@emotion/react'
+import ArkturDMClogo from '../Images/ArkturDMClogo.svg'
 
 const Photo = ({content}) => {
 return (
@@ -8,6 +9,7 @@ return (
     style={{
             width: '100%',
             paddingTop: '2vw',
+            paddingBottom: '5vw',
         //     textAlign: 'left',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
@@ -15,8 +17,8 @@ return (
 
     >
       <img 
-        style={{width: '50%'}} 
-        src={content}/> 
+        style={{width: '50%', height: '60vh' }} 
+        src={content.includes('jpg') ? 'http://' + content : ArkturDMClogo}/> 
  </div>
  )
 }

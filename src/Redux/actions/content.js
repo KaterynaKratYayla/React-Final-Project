@@ -17,7 +17,7 @@ export const getContent = (id) => ( dispatch, getState ) => {
     dispatch({ type: GET_CONTENT_REQ });
 
     console.log('[GET_POSTS]' , id)
-    axios.get(`http://smartbooker.biz/interface/content?id=${id}}&language=en`)
+    axios.get(`http://smartbooker.biz/interface/content?id=${id}&language=en`)
       .then( res => {
         dispatch(contentResponse(res.data))
         console.log('[GET_CONTENT]:' , res.data)

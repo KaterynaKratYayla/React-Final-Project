@@ -62,8 +62,8 @@ export const Gallery = ({galleryImages}) => {
                 transition={transition}
                 width={getWidth() * galleryImages.length}
                   >
-                    {galleryImages.map((slide,index) => (
-                        <Photo key={index} content={slide} />  
+                    {galleryImages.map((slide,index,array) => (
+                        <Photo key={index} content={slide}/>  
                         ))} 
  
              </GalleryContent> 
