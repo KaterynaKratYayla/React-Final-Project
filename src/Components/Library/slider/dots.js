@@ -1,11 +1,7 @@
 import React from 'react'
 import {css,jsx} from '@emotion/react'
 
-const test1 = () => {
-  return(
-      <div>Test</div>
-  )
-}
+
 const Dot = ({ active }) => (
     <span
       css={css`

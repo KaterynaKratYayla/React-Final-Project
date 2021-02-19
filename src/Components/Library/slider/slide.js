@@ -2,11 +2,6 @@ import React from 'react'
 import {css, jsx} from '@emotion/react'
 import './SliderCss.css'
 
-const test2 = () => {
-        return(
-            <div>Test</div>
-        )
-    }
 
 // const Slide = (props) => { 
 //     const {name} = props;

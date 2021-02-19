@@ -1,11 +1,6 @@
 import React from 'react'
 import styled from'@emotion/styled'
 
-const test4 = () => {
-    return(
-        <div>Test</div>
-    )
-}
 
 const SliderContent = styled.div`
     transform: translateX(-${props => props.translate}px); 
