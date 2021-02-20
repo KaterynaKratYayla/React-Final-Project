@@ -109,7 +109,7 @@ useEffect ( () => {
           <h3>Search Results</h3>
               <SearchInner />
                </div>
-                <div>{history.location.pathname}</div>
+                {/* <div>{history.location.pathname}</div> */}
                  <div>
                   <ul className='descriptionUl'>
                     <>
@@ -138,6 +138,7 @@ useEffect ( () => {
                                        tariff = {tariff}
                                        searchResults = {search_data}
                                        history={history}
+                                       tour_name={tour.tour_name}
                                      />
                                     )
                                   }

@@ -16,14 +16,14 @@ import {ValidateQuery} from '../Helpers/helper'
 
 moment.locale('uk')
 
-export const ItemObj = ({tariff, searchResults}) => {
+export const ItemObj = ({tariff, searchResults,tour_name}) => {
 
   const location = useLocation()
   const history = useHistory();
 
   let search_data = ValidateQuery(location)
   console.log('ITEM OBJ LOCATION', location)
-  
+
     //фильтрую объект с тарифами, датами так, чтобы вывести первую встречающую дату каждого вида (к примеру, у меня пришло
     //в массиве 10 раз дата 2021-03-03, 3 раза дата 2021-03-04, 4 раза дата 2021-03-05 - я вывожу новый массив, где будет
     //объект в массиве, где первый раз встречается 2021-03-03, потом объект, где встречается 2021-03-04 первый раз, и т.д.)
@@ -38,7 +38,7 @@ export const ItemObj = ({tariff, searchResults}) => {
     const [detailsList, setDetailsList] = useState([]);
     // const [detailsList, setdetailsList] = useState([{}]);
 
-        console.log('[ItemObj TARIFF]', tariff.tour_id)
+        console.log('[ItemObj TARIFF]', tariff)
         console.log('[ItemObj searchResults]', searchResults)
         // console.log('[ItemObj HISTORY]', history)
 
@@ -60,7 +60,7 @@ setDetailsList([outline]);
   // console.log('TEST TEST', e.view.history)
   // console.log('[DETAILS LIST] : ' , detailsList)
 
-  const route_query = `${location.search},tour_id=${tariff.tour_id},selection=${selection}`
+  const route_query = `${location.search},tour_name=${tour_name},tour_id=${tariff.tour_id},selection=${selection}`
   history.push(`/tour_details/${route_query}`, [...detailsList, outline])
 }
 

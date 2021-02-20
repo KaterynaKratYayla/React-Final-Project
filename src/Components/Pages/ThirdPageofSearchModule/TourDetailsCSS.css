@@ -6,20 +6,65 @@
     margin-right: auto;
 }
 
+.TourDetailsWrapper h2{
+    color: #102D69;
+    font-family: "Arial";
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.Icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* font-weight: bold; */
+    color: #102D69;
+    font-family: "Arial";
+    font-size: 17px;
+}
+
 .TourDetailsInner{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: flex-start;
 }
 
 .GalleryTourDetails{
-    max-width: 50%;
+    max-width: 45%;
     margin-right: 3vw;
-    margin-left: 3vw;
+}
+
+.BookingDetails{
+    display: block;
+    min-width: 45%;
+    min-height: 60vh;
+    border: 2px solid rgb(206, 207, 209);
+    border-radius: 6px;
+    margin-top: 2vw;
+}
+
+.BookingDetails h3{
+    text-align: center;
+    color: #005AEB;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Arial Narrow';
+}
+
+.BookingChoice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.BookingChoice h4{
+    font-family: 'Arial Narrow';
+    font-weight: bold;
+    font-size: 17px;
+    color: rgb(77, 75, 75);
 }
 
 .DescriptionTourDetails{
-    max-width: 50%;
+    /* max-width: 50%; */
     margin-left: 4vw;
 }
